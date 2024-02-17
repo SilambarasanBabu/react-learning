@@ -1,0 +1,23 @@
+{
+  "name": "react-learning",
+  "version": "1.0.0",
+  "description": "This is silambarasan I am learning react",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilambarasanBabu/react-learning.git"
+  },
+  "keywords": [],
+  "author": "silambarasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilambarasanBabu/react-learning/issues"
+  },
+  "homepage": "https://github.com/SilambarasanBabu/react-learning#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
