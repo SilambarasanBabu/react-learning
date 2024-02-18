@@ -11,5 +11,6 @@ const parent = React.createElement("div", { id: "parent" }, [
   ]),
 ]);
 
+const headingjsx = <h1 className="head" tabIndex={1}>hello world from jsx</h1>;
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(headingjsx);
