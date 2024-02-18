@@ -2,9 +2,10 @@
   "name": "react-learning",
   "version": "1.0.0",
   "description": "This is silambarasan I am learning react",
-  "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
