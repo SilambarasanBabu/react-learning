@@ -1,4 +1,7 @@
-#heading {
-  color: aliceblue;
-  background-color: black;
+.bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: aqua;
 }

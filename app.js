@@ -54,5 +54,21 @@ const headingjsx = (
     hello world from jsx
   </h1>
 );
+
+const Header = () => {
+  return (
+    <>
+      <div className="header">
+        <ul className="bar">
+          <li>logo</li>
+          <li>
+            <input type="text" placeholder="search" />
+          </li>
+          <li>user</li>
+        </ul>
+      </div>
+    </>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComp />);
+root.render(<Header />);
