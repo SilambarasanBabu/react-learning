@@ -24,7 +24,10 @@ const Header = () => {
   );
 };
 
-const Card = ({ rName, fDetails, star, time }) => {
+const Card = (props) => {
+  const { restData } = props;
+  const { fname, fdetails, star, time } = restData;
+
   return (
     <>
       <div className="card-container">
@@ -34,14 +37,87 @@ const Card = ({ rName, fDetails, star, time }) => {
             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/TopPicks/25321657A.png"
           />
         </div>
-        <h3 className="food-title">{rName}</h3>
-        <h4 className="food-details">{fDetails}</h4>
+        <h3 className="food-title">{fname}</h3>
+        <h4 className="food-details">{fdetails}</h4>
         <h4 className="food-details">{star}</h4>
         <h4 className="food-details">{time}</h4>
       </div>
     </>
   );
 };
+
+const restList = [
+  {
+    id: 1,
+    fname: "Biriyani",
+    fdetails: "South indian",
+    stars: "4.5",
+    time: "45min",
+  },
+  {
+    id: 2,
+    fname: "Veg-Biriyani",
+    fdetails: "South indian",
+    stars: "4",
+    time: "35min",
+  },
+  {
+    id: 3,
+    fname: "Idile",
+    fdetails: "South indian",
+    stars: "3",
+    time: "5min",
+  },
+  {
+    id: 4,
+    fname: "Dosa",
+    fdetails: "South indian",
+    stars: "4.5",
+    time: "45min",
+  },
+  {
+    id: 5,
+    fname: "Burger",
+    fdetails: "North indian",
+    stars: "4",
+    time: "50min",
+  },
+  {
+    id: 6,
+    fname: "Biriyani",
+    fdetails: "South indian",
+    stars: "4.5",
+    time: "45min",
+  },
+  {
+    id: 7,
+    fname: "Veg-Biriyani",
+    fdetails: "South indian",
+    stars: "4",
+    time: "35min",
+  },
+  {
+    id: 8,
+    fname: "Idile",
+    fdetails: "South indian",
+    stars: "3",
+    time: "5min",
+  },
+  {
+    id: 9,
+    fname: "Dosa",
+    fdetails: "South indian",
+    stars: "4.5",
+    time: "45min",
+  },
+  {
+    id: 10,
+    fname: "Burger",
+    fdetails: "North indian",
+    stars: "4",
+    time: "50min",
+  },
+];
 
 const Body = () => {
   return (
@@ -50,18 +126,9 @@ const Body = () => {
         <h2 className="search">Search</h2>
       </div>
       <div className="rest-container">
-        <Card
-          rName="Ambur briyani"
-          fDetails="South indian briyani"
-          star="4.4 star"
-          time="45 min"
-        />
-        <Card
-          rName="star briyani"
-          fDetails="North indian briyani"
-          star="4.1 star"
-          time="40 min"
-        />
+        {restList.map((res) => (
+          <Card key={res.id} restData={res} />
+        ))}
       </div>
     </>
   );
