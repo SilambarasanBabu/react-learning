@@ -1,7 +1,41 @@
-.bar {
-  list-style: none;
+.head {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
-  background-color: aqua;
+  border: 3px solid black;
+  background-color: bisque;
+  border-radius: 2px;
+}
+
+.logo {
+  width: 120px;
+  background-color: bisque;
+}
+
+.navContainer > ul {
+  display: flex;
+}
+
+.navContainer > ul > li {
+  padding: 10px;
+  margin: 10px;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.body-card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.search{
+  padding: 10px;
+}
+
+.food-img {
+  width: 200px;
+  height: 200px;
 }
