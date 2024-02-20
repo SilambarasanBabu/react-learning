@@ -24,7 +24,7 @@ const Header = () => {
   );
 };
 
-const Card = () => {
+const Card = ({ rName, fDetails, star, time }) => {
   return (
     <>
       <div className="card-container">
@@ -34,10 +34,10 @@ const Card = () => {
             src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_628,h_704/TopPicks/25321657A.png"
           />
         </div>
-        <h3 className="food-title">Ambur briyani</h3>
-        <h4 className="food-details">South indian briyani</h4>
-        <h4 className="food-details">4.4 star</h4>
-        <h4 className="food-details">45 min</h4>
+        <h3 className="food-title">{rName}</h3>
+        <h4 className="food-details">{fDetails}</h4>
+        <h4 className="food-details">{star}</h4>
+        <h4 className="food-details">{time}</h4>
       </div>
     </>
   );
@@ -50,21 +50,18 @@ const Body = () => {
         <h2 className="search">Search</h2>
       </div>
       <div className="rest-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card
+          rName="Ambur briyani"
+          fDetails="South indian briyani"
+          star="4.4 star"
+          time="45 min"
+        />
+        <Card
+          rName="star briyani"
+          fDetails="North indian briyani"
+          star="4.1 star"
+          time="40 min"
+        />
       </div>
     </>
   );
