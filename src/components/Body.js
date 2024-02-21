@@ -1,13 +1,24 @@
 import Card from "./Card";
 import restList from "../utils/mockData";
+import { useState } from "react";
 const Body = () => {
+  const [cd, setCd] = useState(restList);
+
   return (
     <>
       <div className="search-container">
-        <h2 className="search">Search</h2>
+        <button
+          className="filter"
+          onClick={() => {
+            filteredcd = cd.filter((res) => res.stars > 4);
+            setCd(filteredcd);
+          }}
+        >
+          Top Rated
+        </button>
       </div>
       <div className="rest-container">
-        {restList.map((res) => (
+        {cd.map((res) => (
           <Card key={res.id} restData={res} />
         ))}
       </div>

@@ -72,3 +72,10 @@
   font-weight: 400;
   font-family: sans-serif;
 }
+
+.filter {
+  cursor: pointer;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
